@@ -25,17 +25,11 @@ function slider(){
    })
 
    left.addEventListener("click", ()=>{
-      
-        if(counter>=0){
-            counter = 1-slides.length
-        }
 
-        if(counter!=0){
-            counter++
-            
+        counter++
+        if(counter>0){
+            counter = 1-slides.length;
         }
-        
-        
         console.log(counter)
         slides.forEach(((e)=>{
             e.style.transform = `translateX(${counter*100}%)`
